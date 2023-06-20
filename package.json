@@ -1,0 +1,14 @@
+{
+  "name": "practica_web_bootstrap",
+  "version": "1.0.0",
+  "description": "Practica web del cotizador de PS pero con bootstrap esta vez",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Krapp Ramiro",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.63.4"
+  }
+}

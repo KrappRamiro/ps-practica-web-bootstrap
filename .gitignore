@@ -1,3 +1,8 @@
 env/
 __pycache__/
 node_modules/
+app/static/css/*
+
+# Include specific files
+!.gitkeep
+!README

@@ -1,0 +1,83 @@
+@import "../vendors-extensions/bootstrap";
+@import "../variables/colors";
+
+.stepper {
+  &__step {
+    display: flex;
+    align-items: center;
+  }
+  &__number-wrapper {
+    --size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;
+    @include media-breakpoint-up(sm) {
+      --size: 40px;
+    }
+    @include media-breakpoint-up(md) {
+      --size: 60px;
+    }
+    @include media-breakpoint-up(lg) {
+      --size: 70px;
+    }
+    &--current {
+      background-color: $ps-blue;
+    }
+    &--completed {
+      background-color: $ps-blue-05;
+    }
+    &--pending {
+      background-color: $ps-light-grey;
+    }
+  }
+  &__number {
+    font-size: 2rem;
+    font-weight: 500;
+    @include media-breakpoint-up(sm) {
+      font-size: 1.5rem;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 2rem;
+    }
+    &--current {
+      color: white;
+    }
+    &--completed {
+      color: $ps-barely-grey;
+    }
+    &--pending {
+      color: $ps-barely-grey;
+    }
+  }
+  &__title {
+    text-align: center;
+    font-size: 1rem;
+    @include media-breakpoint-up(sm) {
+      font-size: 0.8rem;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 1rem;
+    }
+    &--current {
+      font-weight: bold;
+      color: $ps-blue;
+      @include media-breakpoint-up(sm) {
+        font-size: 1rem;
+      }
+      @include media-breakpoint-up(md) {
+        font-size: 1.2rem;
+      }
+    }
+    &--completed {
+      color: $ps-blue-05;
+    }
+    &--pending {
+      color: $ps-light-grey;
+    }
+  }
+  &__separator {
+  }
+}

@@ -1,0 +1,18 @@
+<section class="stepper">
+   <div class="row">
+      {% for step in steps %}
+         <div class="col-12 col-sm stepper__step flex-row flex-sm-column">
+            <div class="stepper__number-wrapper stepper__number-wrapper--{{ step.status }}">
+               <div class="stepper__number stepper__number--{{ step.status }} ">{{ step.number }}</div>
+            </div>
+            <div class="stepper__title stepper__title--{{ step.status }} ">{{ step.title }}</div>
+         </div>
+         {% if not loop.last %}
+            <div class="col-12 col-sm stepper__separator">
+               {# TODO  Generate the separation line #}
+               -
+            </div>
+         {% endif %}
+      {% endfor %}
+   </div>
+</section>

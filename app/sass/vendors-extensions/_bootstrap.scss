@@ -1,6 +1,9 @@
 //bootstrap.scss
-
-$primary: teal;
-$secondary: green;
+@import "../variables/colors";
+$primary: $ps-blue;
+$secondary: $ps-barely-grey;
+.navbar-brand {
+  height: 80px;
+}
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";

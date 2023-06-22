@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+   <section id="title-with-stepper">
+      <div class="container">
+         <h1 class="flex-center">Elegí tu tipo de seguro</h1>
+         {% include "components/stepper.html" %}
+      </div>
+   </section>
+   <section id="options">
+      <div class="picker flex-center flex-column flex-sm-row">
+         <a href='{{ url_for("ingreso_datos_automotor") }}'>
+            <div class="picker__item">
+               <div class="picker__icon">
+                  <i class="fa-solid fa-car"></i>
+               </div>
+               <div class="picker__title">Auto</div>
+            </div>
+         </a>
+         <div class="picker__item">
+            <div class="picker__icon">
+               <i class="fa-solid fa-motorcycle"></i>
+            </div>
+            <div class="picker__title">Moto</div>
+         </div>
+         <div class="picker__item">
+            <div class="picker__icon">
+               <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="picker__title">Hogar</div>
+         </div>
+         <div class="picker__item">
+            <div class="picker__icon">
+               <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="picker__title">Accidentes Personales</div>
+         </div>
+      </div>
+   </section>
+{% endblock content %}

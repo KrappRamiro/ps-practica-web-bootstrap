@@ -1,10 +1,29 @@
 @import "vendors-extensions/bootstrap";
+@import "components/navbar";
+@import "components/footer";
+@import "components/stepper";
+@import "components/buttons";
+@import "components/picker";
+@import "base/typography";
 
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+.flex-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+}
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-  background-color: $primary;
+// Usa este cuando se te va de height
+.responsive-img-height {
+  max-height: 100%;
+  object-fit: contain;
+}
+// Usa este cuando se te va de width
+.responsive-img-width {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.max-width-full {
+  max-width: 100%;
 }

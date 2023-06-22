@@ -1,0 +1,80 @@
+{% for form in forms %}
+   <form>
+      <!-- Form title -->
+      <h3>{{ form.title }}</h3>
+      <div class="row">
+         {% for input in form.inputs %}
+            {% set col_class = "col-12 col-sm-4" %}  <!-- Default column classes for inputs -->
+            {% if input.size == 'double' %}
+               {% set col_class = "col-12 col-sm-8" %}  <!-- Override column classes for inputs with size: double -->
+            {% endif %}
+            <div class="{{ col_class }}">
+               <div class="form-floating">
+                  {% if input.type == 'select' %}
+                     {% if input['select-multiple'] %}
+                        <!-- Multiple select dropdown -->
+                        <div class="input-group">
+                           <button class="btn btn-secondary dropdown-toggle w-100 text-start"
+                                   type="button"
+                                   id="{{ input.label }}Dropdown"
+                                   data-bs-toggle="dropdown"
+                                   aria-haspopup="true"
+                                   aria-expanded="false">{{ input.label }}</button>
+                           <div class="dropdown-menu w-100"
+                                aria-labelledby="{{ input.label }}Dropdown">
+                              {% for option in input.options %}
+                                 <div class="form-check">
+                                    <input class="form-check-input"
+                                           type="checkbox"
+                                           value="{{ option }}"
+                                           id="{{ option }}"
+                                           name="{{ input.label }}">
+                                    <label class="form-check-label" for="{{ option }}">{{ option }}</label>
+                                 </div>
+                              {% endfor %}
+                           </div>
+                        </div>
+                     {% else %}
+                        <!-- Regular select input -->
+                        <select class="form-select" id="{{ input.label }}" name="{{ input.label }}">
+                           {% for option in input.options %}<option>{{ option }}</option>{% endfor %}
+                        </select>
+                        {% if input.label %}<label for="{{ input.label }}">{{ input.label }}</label>{% endif %}
+                     {% endif %}
+                  {% elif input.type == 'radio' %}
+                     <!-- Radio buttons input -->
+                     <div>
+                        <label>{{ input.label }}</label>
+                        <br>
+                        {% for option in input.options %}
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input"
+                                     type="radio"
+                                     name="{{ input.label }}"
+                                     id="{{ option }}"
+                                     value="{{ option }}">
+                              <label class="form-check-label" for="{{ option }}">{{ option }}</label>
+                           </div>
+                        {% endfor %}
+                     </div>
+                  {% else %}
+                     <!-- Text, email, or telephone input -->
+                     {% if input.label %}<label for="{{ input.label }}" class="form-label">{{ input.label }}</label>{% endif %}
+                     <input type="{{ input.type }}"
+                            class="form-control"
+                            id="{{ input.label }}"
+                            name="{{ input.label }}"
+                            {% if input.placeholder %}placeholder="{{ input.placeholder }}"{% endif %}>
+                  {% endif %}
+                  {% if input.helptext %}
+                     <!-- Help text for input -->
+                     <small id="{{ input.label }}Help" class="form-text text-muted">{{ input.helptext }}</small>
+                  {% endif %}
+               </div>
+            </div>
+         {% endfor %}
+      </div>
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
+{% endfor %}

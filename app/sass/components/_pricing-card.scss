@@ -1,0 +1,79 @@
+@import "../variables/colors";
+.pricing-card {
+  overflow: hidden;
+  border-radius: 20px;
+  width: 332px; //330px + 1px of bordear each side
+  /* --- TOP --- */
+  &__top-wrapper {
+    position: relative;
+    width: 330px;
+  }
+  &__top-black {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    padding-top: 15px;
+    padding-left: 15px;
+
+    background-color: $ps-almost-black;
+    color: white;
+
+    clip-path: polygon(0 0, 100% 0%, 100% 20%, 0 45%);
+    z-index: 2;
+  }
+  &__top-color {
+    height: 300px;
+    padding-top: 100px;
+
+    background-color: $ps-blue-09;
+    text-align: center;
+    color: white;
+
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 75%);
+    z-index: 1;
+    &--featured {
+      background-color: $ps-blue-dark;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  &__money-symbol {
+    font-size: 0.9rem;
+  }
+  &__mes {
+    font-size: 0.9rem;
+  }
+  &__precio-promocional {
+  }
+  &__old-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  &__promo-price {
+    line-height: 2.8rem;
+    font-weight: bolder;
+    font-size: 3rem;
+  }
+
+  /* --- BODY --- */
+  &__body {
+    height: 300px;
+    overflow-y: scroll;
+  }
+  &__infoline-wrapper {
+    margin: auto;
+  }
+  &__infoline-check {
+    text-align: center;
+    color: green;
+  }
+  &__infoline-text {
+    text-align: left;
+  }
+  &__infoline-tooltip {
+    text-align: center;
+  }
+}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+   <section id="title-with-stepper">
+      <div class="container">
+         <h1 class="text-center title">Cotización</h1>
+         <h2 class="text-center subtitle">Elegí un plan a tu medida - Uso particular</h2>
+         {% include "components/stepper.html" %}
+      </div>
+   </section>
+   <section id="cards">
+      <div class="container">
+         <div class="my-5">{% include "components/horizontal_cards_generator.html" %}</div>
+         <div class="my-5">{% include "components/pricing_cards_generator.html" %}</div>
+      </div>
+   </section>
+{% endblock content %}

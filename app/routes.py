@@ -1,102 +1,28 @@
 from app import app
 from flask import render_template, request, session, jsonify, redirect
 
+STEPS = [
+    "Elegí tu seguro",
+    "Carga los datos de tu auto",
+    "Elegí tu plan a medida",
+    "Carga tus datos personales",
+    "Confirma tus datos",
+]
+LOREM_IPSUM = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at dolor nibh. Nunc felis lacus, ullamcorper nec feugiat id, viverra at velit. Vestibulum fermentum lectus sit amet varius eleifend. Nullam rhoncus sodales nulla, non bibendum mi consectetur vel. Nunc nisi libero, aliquam et rutrum ut, interdum non magna. Vestibulum laoreet enim urna, a elementum lacus ultrices et. Vestibulum bibendum, felis quis cursus semper, arcu urna condimentum lorem, eget ultrices sem felis quis ligula. Integer luctus nunc quis dictum auctor. In gravida tristique nulla eget imperdiet."
+
 
 @app.route("/")
 def index():
-    steps = [
-        {
-            "number": 1,
-            "title": "Elegí tu seguro",
-            "status": "current",
-        },
-        {
-            "number": 2,
-            "title": "Carga los datos de tu auto",
-            "status": "current",
-        },
-        {
-            "number": 3,
-            "title": "Elegí tu plan a medida",
-            "status": "current",
-        },
-        {
-            "number": 4,
-            "title": "Carga tus datos personales",
-            "status": "current",
-        },
-        {
-            "number": 5,
-            "title": "Confirma tus datos",
-            "status": "current",
-        },
-    ]
-
-    return render_template("index.html", title="Home", steps=steps)
+    return render_template("index.html", title="Home", steps=STEPS, current_step="all")
 
 
 @app.route("/picker/")
 def picker():
-    steps = [
-        {
-            "number": 1,
-            "title": "Elegí tu seguro",
-            "status": "current",
-        },
-        {
-            "number": 2,
-            "title": "Carga los datos de tu auto",
-            "status": "pending",
-        },
-        {
-            "number": 3,
-            "title": "Elegí tu plan a medida",
-            "status": "pending",
-        },
-        {
-            "number": 4,
-            "title": "Carga tus datos personales",
-            "status": "pending",
-        },
-        {
-            "number": 5,
-            "title": "Confirma tus datos",
-            "status": "pending",
-        },
-    ]
-
-    return render_template("picker.html", title="Picker", steps=steps)
+    return render_template("picker.html", title="Picker", steps=STEPS, current_step=1)
 
 
 @app.route("/ingreso-datos-automotor/")
 def ingreso_datos_automotor():
-    steps = [
-        {
-            "number": 1,
-            "title": "Elegí tu seguro",
-            "status": "pending",
-        },
-        {
-            "number": 2,
-            "title": "Carga los datos de tu auto",
-            "status": "current",
-        },
-        {
-            "number": 3,
-            "title": "Elegí tu plan a medida",
-            "status": "pending",
-        },
-        {
-            "number": 4,
-            "title": "Carga tus datos personales",
-            "status": "pending",
-        },
-        {
-            "number": 5,
-            "title": "Confirma tus datos",
-            "status": "pending",
-        },
-    ]
     forms = [
         {
             "title": "Datos del vehículo",
@@ -139,5 +65,87 @@ def ingreso_datos_automotor():
     ]
 
     return render_template(
-        "ingreso-datos-automotor.html", title="Picker", steps=steps, forms=forms
+        "ingreso-datos-automotor.html",
+        title="Ingreso de datos automotor",
+        steps=STEPS,
+        current_step=2,
+        forms=forms,
+    )
+
+
+@app.route("/cotizacion/")
+def cotizacion():
+    horizontal_cards = [
+        {
+            "icon": "fa-solid fa-car",
+            "title": "Datos del vehículo",
+            "items": [
+                "FIORINO FURGON COMFORT AÑO 2010",
+                "Cotización Nro 86471769",
+                "Suma asegurada: $2.057.000",
+                "Equipo de rastreo obligatorio 21752 - No",
+                "Uso: 21729 - Particular",
+            ],
+        },
+    ]
+    pricing_cards = [
+        {
+            "title": "Basico",
+            "old_price": 20635,
+            "promo_price": 16762,
+            "infolines": [
+                "Daño Total por Accidente",
+                "Cubierta/ llanta hasta 1",
+                "Cubierta/ llanta hasta 1",
+                "Daño Parcial por Robo Total",
+                "Robo/lnc Parcial S/Fcia.",
+                "Cubierta/ llanta hasta 1",
+                "Daño Parcial por Robo Total",
+                "Robo/lnc Parcial S/Fcia.",
+                "Auto Sustituto 5 días",
+            ],
+            "extra_info": LOREM_IPSUM,
+        },
+        {
+            "title": "Todo riesgo",
+            "featured": True,
+            "old_price": 30793,
+            "promo_price": 24793,
+            "infolines": [
+                "Daño Total por Accidente",
+                "Robo/lnc Parcial S/Fcia.",
+                "Auto Sustituto 5 días",
+                "Cubierta/ llanta hasta 1",
+                "Daño Parcial por Robo Total",
+                "Robo/lnc Parcial S/Fcia.",
+                "Auto Sustituto 5 días",
+                "Cubierta/ llanta hasta 1",
+                "Daño Parcial por Robo Total",
+                "Robo/lnc Parcial S/Fcia.",
+                "Auto Sustituto 5 días",
+            ],
+            "extra_info": LOREM_IPSUM,
+        },
+        {
+            "title": "Premium",
+            "old_price": 26701,
+            "promo_price": 22877,
+            "infolines": [
+                "Daño Parcial por Robo Total",
+                "Daño Parcial por Robo Total",
+                "Robo/lnc Parcial S/Fcia",
+                "Cubierta/ llanta hasta 1",
+                "Robo/lnc Parcial S/Fcia",
+                "Cubierta/ llanta hasta 1",
+            ],
+            "extra_info": LOREM_IPSUM,
+        },
+    ]
+    return render_template(
+        "cotizacion.html",
+        title="Cotización",
+        steps=STEPS,
+        current_step=3,
+        horizontal_cards=horizontal_cards,
+        pricing_cards=pricing_cards,
     )

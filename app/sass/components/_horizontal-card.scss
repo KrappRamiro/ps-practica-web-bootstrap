@@ -1,0 +1,22 @@
+@import "../variables/colors";
+.horizontal-card {
+  box-shadow: 10px 10px $ps-blue-05;
+  width: 300px;
+  @include media-breakpoint-up(sm) {
+    width: 400px;
+  }
+  @include media-breakpoint-up(md) {
+    width: 450px;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 550px;
+  }
+  &__icon {
+    font-size: 6rem;
+  }
+  &__title {
+    color: $ps-blue-darker;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}

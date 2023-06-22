@@ -1,0 +1,77 @@
+<div class="d-flex flex-wrap justify-content-center gap-5">
+   {% for card in pricing_cards %}
+      <div class="card pricing-card">
+         <div class="pricing-card__top-wrapper">
+            <div class="pricing-card__top-black">
+               <div class="pricing-card__title">{{ card.title }}</div>
+            </div>
+            <div class="pricing-card__top-color {{ 'pricing-card__top-color--featured' if card.featured }} ">
+               <div>
+                  <span class="pricing-card__money-symbol">$</span>
+                  <span class="pricing-card__old-price strike-through">{{ card.old_price }}</span>
+                  <span class="pricing-card__mes">/MES</span>
+               </div>
+               <div class="pricing-card__precio-promocional">Precio Promocional</div>
+               <div>
+                  <span class="pricing-card__money-symbol">$</span>
+                  <span class="pricing-card__promo-price">{{ card.promo_price }}</span>
+                  <span class="pricing-card__mes">/MES</span>
+               </div>
+            </div>
+         </div>
+         <div class="pricing-card__body">
+            {% for infoline in card.infolines %}
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">{{ infoline }}</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            {% endfor %}
+         </div>
+         <div class="pricing-card__buttons flex-center flex-column mb-5">
+            <button class="btn btn-secondary button-small"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal{{ loop.index }}">Ver más</button>
+            <button class="btn btn-primary button-small">Comprar</button>
+         </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade"
+           id="modal{{ loop.index }}"
+           tabindex="-1"
+           aria-labelledby="modal{{ loop.index }}Label"
+           aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="modal{{ loop.index }}Label">Seguro {{ card.title }}</h5>
+                  <button type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                  <h5>Es muy importante que sepas lo siguiente</h5>
+                  <hr>
+                  <!-- Modal body content goes here -->
+                  <!-- Add any additional information you want to display -->
+                  {{ card.extra_info }}
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Comprar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   {% endfor %}
+</div>
+<script>
+   // Enable Bootstrap's modal functionality
+   var modals = document.querySelectorAll('.modal');
+   var modalInstances = bootstrap.Modal.init(modals);
+</script>

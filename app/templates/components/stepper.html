@@ -1,15 +1,16 @@
-<section class="stepper">
+<section class="stepper my-5">
    <div class="row">
       {% for step in steps %}
-         <div class="col-12 col-sm stepper__step flex-row flex-sm-column">
-            <div class="stepper__number-wrapper stepper__number-wrapper--{{ step.status }}">
-               <div class="stepper__number stepper__number--{{ step.status }} ">{{ step.number }}</div>
+         {% set status = 'completed' if current_step == 'all' or loop.index < current_step else 'current' if loop.index == current_step else 'pending' %}
+         <div class="col-12 col-md stepper__step flex-row flex-md-column">
+            <div class="stepper__number-wrapper stepper__number-wrapper--{{ status }}">
+               <div class="stepper__number stepper__number--{{ status }}">{{ loop.index }}</div>
             </div>
-            <div class="stepper__title stepper__title--{{ step.status }} ">{{ step.title }}</div>
+            <div class="stepper__title stepper__title--{{ status }}">{{ step }}</div>
          </div>
          {% if not loop.last %}
             <div class="col-12 col-sm stepper__separator">
-               {# TODO  Generate the separation line #}
+               {# TODO: Generate the separation line #}
                -
             </div>
          {% endif %}

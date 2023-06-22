@@ -1,4 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
+   <section id="title-with-stepper">
+      <div class="container">
+         <h1 class="flex-center title">Datos del vehículo</h1>
+         <h2 class="flex-center subtitle">Ingresá los datos de tu vehículo - Uso Particular</h2>
+         {% include "components/stepper.html" %}
+      </div>
+   </section>
    <div class="container">{% include "components/form_generator.html" %}</div>
+   <div class="container flex-center">
+      <a href='{{ url_for("cotizacion") }}'>
+         <button class="btn btn-primary button-large">Continuar</button>
+      </a>
+   </div>
 {% endblock content %}

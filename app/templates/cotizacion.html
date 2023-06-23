@@ -16,7 +16,10 @@
    <section class="my-5 py-5" id="buttons">
       <div class="container">
          <div class="flex-center flex-column flex-sm-row">
-            <button class="btn btn-secondary button-small m-3">Anterior</button>
+            <a href='{{ url_for("ingreso_datos_automotor") }}'
+               class="text-decoration-none">
+               <button class="btn btn-secondary button-small m-3">Anterior</button>
+            </a>
             <button class="btn btn-secondary button-small m-3">Ver en PDF</button>
             <button class="btn btn-secondary button-small m-3">Contactate</button>
          </div>

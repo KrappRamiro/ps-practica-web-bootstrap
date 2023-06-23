@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+   <div class="container my-5">
+      <div class="row justify-content-between g-5">
+         <div class="col-12 col-lg-4">
+            <h1 class="title display-1 text-center text-lg-start my-3 my-xl-5">Error 404</h1>
+            <h2 class="subtitle display-6 text-center text-lg-start my-3 my-xl-5">
+               Disculpá, la página solicitada no ha sido encontrada.
+            </h2>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+               <a class="btn btn-primary button-large my-3 my-xl-5"
+                  href='{{ url_for("index") }}'>
+                  <span>Volver</span>
+               </a>
+            </div>
+         </div>
+         <div class="col-12 col-lg-6 flex-center">
+            <img src="{{ url_for('static', filename='img/404.svg') }}"
+                 alt="Order confirmed"
+                 class="responsive-img-width">
+         </div>
+      </div>
+   </div>
+{% endblock content %}

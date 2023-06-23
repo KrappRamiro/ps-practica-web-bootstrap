@@ -1,18 +1,20 @@
-<div class="d-flex flex-wrap justify-content-evenly gap-5">
-   {% for card in horizontal_cards %}
-      <div class="card horizontal-card border-primary mb-3">
-         <div class="row g-0">
-            <div class="col-md-4 flex-center">
-               <i class="horizontal-card__icon ~ {{ card.icon }}"></i>
-            </div>
-            <div class="col-md-8">
-               <div class="card-body">
-                  <h5 class="card-title horizontal-card__title text-center">{{ card.title }}</h5>
-                  <div class="card-text">
+{% for card in horizontal_cards %}
+   <div class="col card horizontal-card border-primary flex-center mb-3">
+      <div class="row gx-3">
+         <div class="col-md-4 flex-center">
+            <i class="horizontal-card__icon ~ fa-solid {{ card.icon }}"></i>
+         </div>
+         <div class="col-md-8">
+            <div class="card-body">
+               <h5 class="card-title horizontal-card__title text-center">{{ card.title }}</h5>
+               <div class="card-text">
+                  {% if card.type == "list" %}
                      <ul class="list-group list-group-flush">
                         {% for item in card["items"] %}<li class="list-group-item">{{ item }}</li>{% endfor %}
                      </ul>
-                  </div>
+                  {% else %}
+                     <div class="text-center">{{ card.description }}</div>
+                  {% endif %}
                </div>
             </div>
          </div>

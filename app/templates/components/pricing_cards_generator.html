@@ -36,7 +36,9 @@
             <button class="btn btn-secondary button-small"
                     data-bs-toggle="modal"
                     data-bs-target="#modal{{ loop.index }}">Ver más</button>
-            <button class="btn btn-primary button-small">Comprar</button>
+            <a href='{{ url_for("ingreso_datos_personales") }}'>
+               <button class="btn btn-primary button-small">Comprar</button>
+            </a>
          </div>
       </div>
       <!-- Modal -->

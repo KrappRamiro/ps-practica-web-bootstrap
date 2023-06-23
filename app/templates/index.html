@@ -3,15 +3,17 @@
    {# Titulo con Logo #}
    <section id="hero">
       <div class="container my-5">
-         <div class="row flex-column flex-sm-row">
-            <div class="col-12 col-sm-5">
-               <h1 class="title">Asegura con Provincia Seguros</h1>
-               <h2 class="subtitle">Asegura online tu auto o moto al menor precio del mercado bla bla bla</h2>
-               <div class="d-flex flex-column">
-                  <a class="btn btn-primary button-large">
+         <div class="row flex-column flex-lg-row ">
+            <div class="col-12 col-lg-6">
+               <h1 class="display-1 title mb-5 text-center text-lg-start ">Asegura con Provincia Seguros</h1>
+               <h2 class="display-6 subtitle my-5 text-center text-lg-start">
+                  Asegura online tu auto o moto al mejor precio del mercado bla bla bla
+               </h2>
+               <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-lg-start gap-3 mb-5">
+                  <a class="btn btn-primary button-large" href="#pasos-cotizar">
                      <span>Quiero Cotizar</span>
                   </a>
-                  <a class="btn btn-secondary button-large">
+                  <a class="btn btn-secondary button-large" href="#beneficios">
                      <span> Quiero conocer
                         <br>
                         mis beneficios
@@ -19,7 +21,7 @@
                   </a>
                </div>
             </div>
-            <div class="col-12 col-sm-7 flex-center">
+            <div class="col-12 col-lg-6 flex-center">
                <img src="{{ url_for('static', filename='img/personitas.svg') }}"
                     alt=""
                     class="responsive-img-width">
@@ -28,27 +30,20 @@
       </div>
    </section>
    {# Beneficios #}
-   <section class="bg-secondary" id="beneficios">
-      <div class="container my-5">
-         <h1 class="title">
-            Beneficios por asegurar tu auto
-            <br>
-            con Provincia Seguros
-         </h1>
-         {# TODO: Beneficios acá #}
-         <img src="{{ url_for('static', filename='img/beneficios.png') }}"
-              alt="Beneficios"
-              class="responsive-img-width">
+   <section class="bg-secondary py-5" id="beneficios">
+      <div class="container py-5">
+         <h2 class="display-2 title text-center text-xl-start">Beneficios por asegurar tu auto con Provincia Seguros</h2>
+         <div class="row row-cols-1 flex-center my-5">{% include "components/horizontal_cards_generator.html" %}</div>
       </div>
    </section>
    {# Pasos para cotizar y boton hacia cotizador #}
    <section id="pasos-cotizar">
       <div class="container my-5">
-         <h1 class="title">
+         <h2 class="title display-2 text-center text-xl-start">
             ¿Cómo cotizo y contrato mi seguro
             <br>
             100% online?
-         </h1>
+         </h2>
          <div class="container flex-center flex-column">
             {% include "components/stepper.html" %}
             <a href='{{ url_for("picker") }}'>

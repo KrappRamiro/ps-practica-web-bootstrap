@@ -1,22 +1,20 @@
-@import "../vendors-extensions/bootstrap";
 @import "../variables/colors";
 
 .stepper {
+  display: flex;
+  justify-content: center;
   &__step {
     display: flex;
     align-items: center;
   }
   &__number-wrapper {
-    --size: 50px;
+    --size: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: var(--size);
     height: var(--size);
     border-radius: 100%;
-    @include media-breakpoint-up(sm) {
-      --size: 40px;
-    }
     @include media-breakpoint-up(md) {
       --size: 60px;
     }
@@ -36,9 +34,7 @@
   &__number {
     font-size: 2rem;
     font-weight: 500;
-    @include media-breakpoint-up(sm) {
-      font-size: 1.5rem;
-    }
+
     @include media-breakpoint-up(md) {
       font-size: 2rem;
     }
@@ -54,28 +50,28 @@
   }
   &__title {
     text-align: center;
-    font-size: 1rem;
-    @include media-breakpoint-up(sm) {
-      font-size: 0.8rem;
-    }
+    font-size: 1.5rem;
+    margin-left: 10px;
+
     @include media-breakpoint-up(md) {
       font-size: 1rem;
+      margin-left: unset;
     }
     &--current {
-      font-weight: bold;
+      font-weight: bolder;
       color: $ps-blue;
-      @include media-breakpoint-up(sm) {
-        font-size: 1rem;
-      }
+      font-size: 1.7rem;
       @include media-breakpoint-up(md) {
         font-size: 1.2rem;
       }
     }
     &--completed {
       color: $ps-blue-05;
+      font-weight: 400;
     }
     &--pending {
       color: $ps-light-grey;
+      font-weight: 400;
     }
   }
   &__separator {

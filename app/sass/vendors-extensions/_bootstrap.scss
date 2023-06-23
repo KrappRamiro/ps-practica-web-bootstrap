@@ -5,5 +5,8 @@ $secondary: $ps-barely-grey;
 .navbar-brand {
   height: 80px;
 }
+.btn-secondary {
+  color: $ps-dark-grey;
+}
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";

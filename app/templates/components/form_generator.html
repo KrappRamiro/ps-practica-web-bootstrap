@@ -1,8 +1,8 @@
 {% for form in forms %}
    <form>
       <!-- Form title -->
-      <h3>{{ form.title }}</h3>
-      <div class="row">
+      <h3 class="mt-5 horizontal-line">{{ form.title }}</h3>
+      <div class="row gy-4">
          {% for input in form.inputs %}
             {% set col_class = "col-12 col-sm-4" %}  <!-- Default column classes for inputs -->
             {% if input.size == 'double' %}
@@ -63,7 +63,7 @@
                             class="form-control"
                             id="{{ input.label }}"
                             name="{{ input.label }}"
-                            {% if input.placeholder %}placeholder="{{ input.placeholder }}"{% endif %}>
+                            placeholder=" ">
                      {% if input.label %}<label for="{{ input.label }}" class="floating-label">{{ input.label }}</label>{% endif %}
                   {% endif %}
                   {% if input.helptext %}

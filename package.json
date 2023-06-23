@@ -4,7 +4,7 @@
 	"description": "Practica web del cotizador de PS pero con bootstrap esta vez",
 	"main": "index.js",
 	"scripts": {
-		"compile-sass": "sass --watch app/sass:app/static/css",
+		"compile-sass": "sass --watch app/sass:app/static/css --style compressed",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "Krapp Ramiro",

@@ -1,0 +1,17 @@
+<div class="row g-5 flex-center my-3">
+   {% for card in beneficios %}
+      <div class="card col-10 col-xl-5 beneficios border-primary mx-3">
+         <div class="row g-0 flex-center">
+            <div class="col-md-4">
+               <i class="fa-solid {{ card.icon }} beneficios__icon"></i>
+            </div>
+            <div class="col-md-8">
+               <div class="card-body">
+                  <h5 class="card-title text-center beneficios__title">{{ card.title }}</h5>
+                  <div class="card-text">{{ card.description }}</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   {% endfor %}
+</div>

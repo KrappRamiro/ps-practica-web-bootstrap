@@ -1,0 +1,38 @@
+/* Strikethrough effect for discounts */
+.strike-through {
+  position: relative;
+  overflow: hidden;
+}
+
+.strike-through::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: red;
+  transform: translateY(-50%) rotate(-10deg);
+}
+
+/* Horizontal line like this */
+//  ___________________________________________
+//	|                                           |
+//	|                                           |
+// | My heading here ------------------------- | <---- Horizontal line here
+//	|                                           |
+//	|___________________________________________|
+
+.horizontal-line {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.horizontal-line::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: black;
+  margin-left: 1rem;
+}

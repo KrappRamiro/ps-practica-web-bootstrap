@@ -8,7 +8,7 @@
     align-items: center;
   }
   &__number-wrapper {
-    --size: 70px;
+    --size: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,7 @@
     }
   }
   &__number {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 500;
 
     @include media-breakpoint-up(md) {
@@ -49,18 +49,22 @@
     }
   }
   &__title {
-    text-align: center;
-    font-size: 1.5rem;
+    text-align: start;
+    font-size: 1.3rem;
     margin-left: 10px;
 
     @include media-breakpoint-up(md) {
+      text-align: center;
       font-size: 1rem;
       margin-left: unset;
     }
     &--current {
       font-weight: bolder;
       color: $ps-blue;
-      font-size: 1.7rem;
+      font-size: 1.2rem;
+      @include media-breakpoint-up(sm) {
+        font-size: 1.4rem;
+      }
       @include media-breakpoint-up(md) {
         font-size: 1.2rem;
       }

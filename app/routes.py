@@ -52,12 +52,39 @@ def index():
             "description": "Con Provincia Seguros, ahorrá mucha mucha plata",
         },
     ]
+    faq = [
+        {
+            "title": "¿Cómo puedo pagar mi seguro?",
+            "description": "Respuesta",
+        },
+        {
+            "title": "¿Cuándo puedo darme de baja?",
+            "description": "Respuesta",
+        },
+        {
+            "title": "¿A partir de qué momento tengo cobertura? ¿Cuánto dura?",
+            "description": "Respuesta",
+        },
+        {
+            "title": "¿Qué es la franquicia?",
+            "description": "Respuesta",
+        },
+        {
+            "title": "¿Provincia Seguros tiene que inspeccionar mi auto para asegurarlo?",
+            "description": "Respuesta",
+        },
+        {
+            "title": "¿Qué pasa si pierdo mi documentación?",
+            "description": "Respuesta",
+        },
+    ]
     return render_template(
         "index.html",
         title="Home",
         steps=STEPS,
         current_step="all",
         horizontal_cards=beneficios,
+        faq=faq,
     )
 
 

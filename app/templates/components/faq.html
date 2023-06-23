@@ -1,0 +1,44 @@
+{# This component displays a Frequently Asked Questions section.
+For each element inside the faq variable, a question is generated 
+faq should be a list of dictionaries with number, title, and description, like the following example:
+
+faq = [
+	{
+		"title": "Pregunta",
+		"description": "Respuesta",
+	},
+	{
+		"title": "Pregunta",
+		"description": "Respuesta",
+	},
+	{
+		"title": "Pregunta",
+		"description": "Respuesta",
+	},
+]
+#}
+<div class="row">
+   <div class="col-xl-3">
+      <h1 class="me-3 title display-1 text-center text-xl-start">¿Tenés dudas?</h1>
+   </div>
+   <div class="col-xl-9 bg-">
+      {# Acordeón con el contenido de las FAQ #}
+      <div class="accordion borderless-accordion">
+         {% for item in faq %}
+            <div class="accordion-item">
+               <h2 class="accordion-header">
+                  <button class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#panel-{{ loop.index }}"
+                          aria-expanded="false"
+                          aria-controls="panel-{{ loop.index }}">{{ item.title }}</button>
+               </h2>
+               <div id="panel-{{ loop.index }}" class="accordion-collapse collapse">
+                  <div class="accordion-body">{{ item.description }}</div>
+               </div>
+            </div>
+         {% endfor %}
+      </div>
+   </div>
+</div>

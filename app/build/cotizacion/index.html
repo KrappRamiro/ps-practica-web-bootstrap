@@ -1,0 +1,633 @@
+<!-- Base document, to be extended by other html files with Jinja -->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      <link rel="stylesheet"
+            href="/static/css/main.css">
+      
+      <script src="https://kit.fontawesome.com/3ec9da0d5c.js"
+              crossorigin="anonymous"></script>
+      
+         <title>Cotización - Cotizador</title>
+      
+   </head>
+   <body>
+      
+      <section id="navbar">
+   <nav class="navbar bg-primary navbar-expand-lg">
+      <div class="container-fluid d-flex justify-content-between align-items-center px-4 px-sm-5">
+         <a class="navbar-brand" href='/'>
+            <img src="/static/img/logo_prov_blanco.png"
+                 alt="Logo Provincia seguros"
+                 class="responsive-img-height">
+         </a>
+         <span class="phone-number">0800-112-3221</span>
+      </div>
+   </nav>
+</section>
+      
+      <main>
+         
+   <section id="title-with-stepper">
+      <div class="container">
+         <h1 class="text-center title">Cotización</h1>
+         <h2 class="text-center subtitle">Elegí un plan a tu medida - Uso particular</h2>
+         <section class="stepper my-5">
+   <div class="row g-4 g-md-5">
+      
+         
+            
+         
+         <div class="col-12 col-md stepper__step flex-row flex-md-column">
+            <div class="stepper__number-wrapper stepper__number-wrapper--completed">
+               <div class="stepper__number stepper__number--completed">1</div>
+            </div>
+            <div class="stepper__title stepper__title--completed">Elegí tu seguro</div>
+         </div>
+         
+      
+         
+            
+         
+         <div class="col-12 col-md stepper__step flex-row flex-md-column">
+            <div class="stepper__number-wrapper stepper__number-wrapper--completed">
+               <div class="stepper__number stepper__number--completed">2</div>
+            </div>
+            <div class="stepper__title stepper__title--completed">Carga los datos de tu auto</div>
+         </div>
+         
+      
+         
+            
+         
+         <div class="col-12 col-md stepper__step flex-row flex-md-column">
+            <div class="stepper__number-wrapper stepper__number-wrapper--current">
+               <div class="stepper__number stepper__number--current">3</div>
+            </div>
+            <div class="stepper__title stepper__title--current">Elegí tu plan a medida</div>
+         </div>
+         
+      
+         
+            
+         
+         <div class="col-12 col-md stepper__step flex-row flex-md-column">
+            <div class="stepper__number-wrapper stepper__number-wrapper--pending">
+               <div class="stepper__number stepper__number--pending">4</div>
+            </div>
+            <div class="stepper__title stepper__title--pending">Carga tus datos personales</div>
+         </div>
+         
+      
+         
+            
+         
+         <div class="col-12 col-md stepper__step flex-row flex-md-column">
+            <div class="stepper__number-wrapper stepper__number-wrapper--pending">
+               <div class="stepper__number stepper__number--pending">5</div>
+            </div>
+            <div class="stepper__title stepper__title--pending">Confirma tus datos</div>
+         </div>
+         
+      
+   </div>
+</section>
+      </div>
+   </section>
+   <section id="cards">
+      <div class="container">
+         <div class="my-5 flex-center flex-column flex-xl-row">
+   <div class="col card horizontal-card border-primary flex-center mb-3">
+      <div class="row gx-3">
+         <div class="col-md-4 flex-center">
+            <i class="horizontal-card__icon ~ fa-solid fa-solid fa-car"></i>
+         </div>
+         <div class="col-md-8">
+            <div class="card-body">
+               <h5 class="card-title horizontal-card__title text-center">Datos del vehículo</h5>
+               <div class="card-text">
+                  
+                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item">FIORINO FURGON COMFORT AÑO 2010</li><li class="list-group-item">Cotización Nro 86471769</li><li class="list-group-item">Suma asegurada: $2.057.000</li><li class="list-group-item">Equipo de rastreo obligatorio 21752 - No</li><li class="list-group-item">Uso: 21729 - Particular</li>
+                     </ul>
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="col card horizontal-card border-primary flex-center mb-3">
+      <div class="row gx-3">
+         <div class="col-md-4 flex-center">
+            <i class="horizontal-card__icon ~ fa-solid fa-solid fa-shield"></i>
+         </div>
+         <div class="col-md-8">
+            <div class="card-body">
+               <h5 class="card-title horizontal-card__title text-center">Datos del vehículo</h5>
+               <div class="card-text">
+                  
+                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item">FIORINO FURGON COMFORT AÑO 2010</li><li class="list-group-item">Cotización Nro 86471769</li><li class="list-group-item">Suma asegurada: $2.057.000</li><li class="list-group-item">Equipo de rastreo obligatorio 21752 - No</li><li class="list-group-item">Uso: 21729 - Particular</li>
+                     </ul>
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+         <div class="my-5"><div class="d-flex flex-wrap justify-content-center gap-5">
+   
+      <div class="card pricing-card">
+         <div class="pricing-card__top-wrapper">
+            <div class="pricing-card__top-black">
+               <div class="pricing-card__title">Basico</div>
+            </div>
+            <div class="pricing-card__top-color  ">
+               <div>
+                  <span class="pricing-card__money-symbol">$</span>
+                  <span class="pricing-card__old-price strike-through">20635</span>
+                  <span class="pricing-card__mes">/MES</span>
+               </div>
+               <div class="pricing-card__precio-promocional">Precio Promocional</div>
+               <div>
+                  <span class="pricing-card__money-symbol">$</span>
+                  <span class="pricing-card__promo-price">16762</span>
+                  <span class="pricing-card__mes">/MES</span>
+               </div>
+            </div>
+         </div>
+         <div class="pricing-card__body">
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Daño Total por Accidente</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Cubierta/ llanta hasta 1</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Cubierta/ llanta hasta 1</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Daño Parcial por Robo Total</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Robo/lnc Parcial S/Fcia.</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Cubierta/ llanta hasta 1</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Daño Parcial por Robo Total</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Robo/lnc Parcial S/Fcia.</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Auto Sustituto 5 días</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+         </div>
+         <div class="pricing-card__buttons flex-center flex-column mb-5">
+            <button class="btn btn-secondary button-small"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal1">Ver más</button>
+            <a href='/ingreso-datos-personales/'>
+               <button class="btn btn-primary button-small">Comprar</button>
+            </a>
+         </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade"
+           id="modal1"
+           tabindex="-1"
+           aria-labelledby="modal1Label"
+           aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="modal1Label">Seguro Basico</h5>
+                  <button type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                  <h5>Es muy importante que sepas lo siguiente</h5>
+                  <hr>
+                  <!-- Modal body content goes here -->
+                  <!-- Add any additional information you want to display -->
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at dolor nibh. Nunc felis lacus, ullamcorper nec feugiat id, viverra at velit. Vestibulum fermentum lectus sit amet varius eleifend. Nullam rhoncus sodales nulla, non bibendum mi consectetur vel. Nunc nisi libero, aliquam et rutrum ut, interdum non magna. Vestibulum laoreet enim urna, a elementum lacus ultrices et. Vestibulum bibendum, felis quis cursus semper, arcu urna condimentum lorem, eget ultrices sem felis quis ligula. Integer luctus nunc quis dictum auctor. In gravida tristique nulla eget imperdiet.
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Comprar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   
+      <div class="card pricing-card">
+         <div class="pricing-card__top-wrapper">
+            <div class="pricing-card__top-black">
+               <div class="pricing-card__title">Todo riesgo</div>
+            </div>
+            <div class="pricing-card__top-color pricing-card__top-color--featured ">
+               <div>
+                  <span class="pricing-card__money-symbol">$</span>
+                  <span class="pricing-card__old-price strike-through">30793</span>
+                  <span class="pricing-card__mes">/MES</span>
+               </div>
+               <div class="pricing-card__precio-promocional">Precio Promocional</div>
+               <div>
+                  <span class="pricing-card__money-symbol">$</span>
+                  <span class="pricing-card__promo-price">24793</span>
+                  <span class="pricing-card__mes">/MES</span>
+               </div>
+            </div>
+         </div>
+         <div class="pricing-card__body">
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Daño Total por Accidente</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Robo/lnc Parcial S/Fcia.</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Auto Sustituto 5 días</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Cubierta/ llanta hasta 1</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Daño Parcial por Robo Total</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Robo/lnc Parcial S/Fcia.</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Auto Sustituto 5 días</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Cubierta/ llanta hasta 1</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Daño Parcial por Robo Total</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Robo/lnc Parcial S/Fcia.</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Auto Sustituto 5 días</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+         </div>
+         <div class="pricing-card__buttons flex-center flex-column mb-5">
+            <button class="btn btn-secondary button-small"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal2">Ver más</button>
+            <a href='/ingreso-datos-personales/'>
+               <button class="btn btn-primary button-small">Comprar</button>
+            </a>
+         </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade"
+           id="modal2"
+           tabindex="-1"
+           aria-labelledby="modal2Label"
+           aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="modal2Label">Seguro Todo riesgo</h5>
+                  <button type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                  <h5>Es muy importante que sepas lo siguiente</h5>
+                  <hr>
+                  <!-- Modal body content goes here -->
+                  <!-- Add any additional information you want to display -->
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at dolor nibh. Nunc felis lacus, ullamcorper nec feugiat id, viverra at velit. Vestibulum fermentum lectus sit amet varius eleifend. Nullam rhoncus sodales nulla, non bibendum mi consectetur vel. Nunc nisi libero, aliquam et rutrum ut, interdum non magna. Vestibulum laoreet enim urna, a elementum lacus ultrices et. Vestibulum bibendum, felis quis cursus semper, arcu urna condimentum lorem, eget ultrices sem felis quis ligula. Integer luctus nunc quis dictum auctor. In gravida tristique nulla eget imperdiet.
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Comprar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   
+      <div class="card pricing-card">
+         <div class="pricing-card__top-wrapper">
+            <div class="pricing-card__top-black">
+               <div class="pricing-card__title">Premium</div>
+            </div>
+            <div class="pricing-card__top-color  ">
+               <div>
+                  <span class="pricing-card__money-symbol">$</span>
+                  <span class="pricing-card__old-price strike-through">26701</span>
+                  <span class="pricing-card__mes">/MES</span>
+               </div>
+               <div class="pricing-card__precio-promocional">Precio Promocional</div>
+               <div>
+                  <span class="pricing-card__money-symbol">$</span>
+                  <span class="pricing-card__promo-price">22877</span>
+                  <span class="pricing-card__mes">/MES</span>
+               </div>
+            </div>
+         </div>
+         <div class="pricing-card__body">
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Daño Parcial por Robo Total</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Daño Parcial por Robo Total</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Robo/lnc Parcial S/Fcia</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Cubierta/ llanta hasta 1</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Robo/lnc Parcial S/Fcia</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+               <div class="pricing-card__infoline-wrapper row">
+                  <div class="pricing-card__infoline-check col-1 flex-center">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="pricing-card__infoline-text col-10">Cubierta/ llanta hasta 1</div>
+                  <div class="pricing-card__infoline-tooltip col-1 flex-center">
+                     <i class="fa-solid fa-circle-info"></i>
+                  </div>
+               </div>
+            
+         </div>
+         <div class="pricing-card__buttons flex-center flex-column mb-5">
+            <button class="btn btn-secondary button-small"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal3">Ver más</button>
+            <a href='/ingreso-datos-personales/'>
+               <button class="btn btn-primary button-small">Comprar</button>
+            </a>
+         </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade"
+           id="modal3"
+           tabindex="-1"
+           aria-labelledby="modal3Label"
+           aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="modal3Label">Seguro Premium</h5>
+                  <button type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                  <h5>Es muy importante que sepas lo siguiente</h5>
+                  <hr>
+                  <!-- Modal body content goes here -->
+                  <!-- Add any additional information you want to display -->
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at dolor nibh. Nunc felis lacus, ullamcorper nec feugiat id, viverra at velit. Vestibulum fermentum lectus sit amet varius eleifend. Nullam rhoncus sodales nulla, non bibendum mi consectetur vel. Nunc nisi libero, aliquam et rutrum ut, interdum non magna. Vestibulum laoreet enim urna, a elementum lacus ultrices et. Vestibulum bibendum, felis quis cursus semper, arcu urna condimentum lorem, eget ultrices sem felis quis ligula. Integer luctus nunc quis dictum auctor. In gravida tristique nulla eget imperdiet.
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Comprar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   
+</div>
+<script>
+   // Enable Bootstrap's modal functionality
+   var modals = document.querySelectorAll('.modal');
+   var modalInstances = bootstrap.Modal.init(modals);
+</script></div>
+      </div>
+   </section>
+
+      </main>
+      
+      <footer class="footer overflow-hidden">
+   <div class="container-fluid px-0">
+      <div>
+         <img src="/static/img/layered-waves.svg"
+              alt="Layered waves"
+              class="responsive-img-height">
+      </div>
+      <div class="row">
+         <div class="col col--center">
+            N° de inscripción
+            <br>
+            SSN0244
+         </div>
+         <div class="col col--center">
+            Atención al asegurado
+            <br>
+            0800-666-8400
+         </div>
+         <div class="col col--center">Organismo de Control</div>
+         <div class="col col--center">
+            <a href="https://www.argentina.gob.ar/superintendencia-de-seguros">
+               <img src="/static/img/ssn.jpg"
+                    alt="Logo SSN"
+                    class="responsive-img-height">
+            </a>
+         </div>
+      </div>
+   </div>
+</footer>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+      </script>
+   </body>
+</html>

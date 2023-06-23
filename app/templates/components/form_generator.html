@@ -39,7 +39,7 @@
                         <select class="form-select" id="{{ input.label }}" name="{{ input.label }}">
                            {% for option in input.options %}<option>{{ option }}</option>{% endfor %}
                         </select>
-                        {% if input.label %}<label for="{{ input.label }}">{{ input.label }}</label>{% endif %}
+                        {% if input.label %}<label for="{{ input.label }}" class="floating-label">{{ input.label }}</label>{% endif %}
                      {% endif %}
                   {% elif input.type == 'radio' %}
                      <!-- Radio buttons input -->
@@ -59,12 +59,12 @@
                      </div>
                   {% else %}
                      <!-- Text, email, or telephone input -->
-                     {% if input.label %}<label for="{{ input.label }}" class="form-label">{{ input.label }}</label>{% endif %}
                      <input type="{{ input.type }}"
                             class="form-control"
                             id="{{ input.label }}"
                             name="{{ input.label }}"
                             {% if input.placeholder %}placeholder="{{ input.placeholder }}"{% endif %}>
+                     {% if input.label %}<label for="{{ input.label }}" class="floating-label">{{ input.label }}</label>{% endif %}
                   {% endif %}
                   {% if input.helptext %}
                      <!-- Help text for input -->

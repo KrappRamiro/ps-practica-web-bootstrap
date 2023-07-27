@@ -437,7 +437,7 @@ def ingreso_datos_personales():
                 },
                 {
                     "type": "text",
-                    "label": "Número de chasis",
+                    "label": "Número de chasis (inspec)",
                 },
             ],
         },

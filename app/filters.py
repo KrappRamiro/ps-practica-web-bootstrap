@@ -46,6 +46,13 @@ def clean_text(text):
     """
     if not isinstance(text, str):
         raise TypeError("Input must be a string.")
-    text = reemplazar_vocales_con_tildes(text).replace(" ", "-").replace("(", "").replace(")", "")
+    text = (
+        reemplazar_vocales_con_tildes(text)
+        .replace(" ", "-")
+        .replace("(", "")
+        .replace(")", "")
+        .replace("¿", "")
+        .replace("?", "")
+    )
 
     return text

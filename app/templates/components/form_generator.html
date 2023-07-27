@@ -1,5 +1,5 @@
 {% for form in forms %}
-   <form>
+   <div class="form">
       <!-- Form title -->
       <h3 class="mt-5 horizontal-line">{{ form.title }}</h3>
       <div class="row gy-4">
@@ -27,8 +27,8 @@
                                     <input class="form-check-input"
                                            type="checkbox"
                                            value="{{ option }}"
-                                           id="{{ option }}"
-                                           name="{{ input.label }}"
+                                           id="{{ option | clean_text }}"
+                                           name="{{ input.label | clean_text }}"
                                            style="margin-left: 1px;
                                                   margin-right: 10px">
                                     <label class="form-check-label" for="{{ option }}">{{ option }}</label>
@@ -38,7 +38,9 @@
                         </div>
                      {% else %}
                         <!-- Regular select input -->
-                        <select class="form-select" id="{{ input.label }}" name="{{ input.label }}">
+                        <select class="form-select"
+                                id="{{ input.label | clean_text }}"
+                                name="{{ input.label | clean_text }}">
                            {% for option in input.options %}<option>{{ option }}</option>{% endfor %}
                         </select>
                         {% if input.label %}<label for="{{ input.label }}" class="floating-label">{{ input.label }}</label>{% endif %}
@@ -52,8 +54,8 @@
                            <div class="form-check form-check-inline">
                               <input class="form-check-input"
                                      type="radio"
-                                     name="{{ input.label }}"
-                                     id="{{ option }}"
+                                     name="{{ input.label | clean_text }}"
+                                     id="{{ option | clean_text }}"
                                      value="{{ option }}">
                               <label class="form-check-label" for="{{ option }}">{{ option }}</label>
                            </div>
@@ -63,18 +65,18 @@
                      <!-- Text, email, or telephone input -->
                      <input type="{{ input.type }}"
                             class="form-control"
-                            id="{{ input.label }}"
-                            name="{{ input.label }}"
+                            id="{{ input.label | clean_text }}"
+                            name="{{ input.label | clean_text }}"
                             placeholder=" ">
                      {% if input.label %}<label for="{{ input.label }}" class="floating-label">{{ input.label }}</label>{% endif %}
                   {% endif %}
                   {% if input.helptext %}
                      <!-- Help text for input -->
-                     <small id="{{ input.label }}Help" class="form-text text-muted">{{ input.helptext }}</small>
+                     <small id="{{ input.label | clean_text }}Help" class="form-text text-muted">{{ input.helptext }}</small>
                   {% endif %}
                </div>
             </div>
          {% endfor %}
       </div>
-   </form>
+   </div>
 {% endfor %}

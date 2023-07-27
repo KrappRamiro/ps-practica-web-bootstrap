@@ -7,14 +7,20 @@
          {% include "components/stepper.html" %}
       </div>
    </section>
-   <div class="container">{% include "components/form_generator.html" %}</div>
-   <div class="container my-5">
-      <div class="flex-center flex-column flex-sm-row">
-         <button class="btn btn-secondary button-small m-3">Anterior</button>
-         <a href='{{ url_for("confirmacion") }}'>
-            <button class="btn btn-primary button-large">Continuar</button>
-         </a>
-         <button class="btn btn-secondary button-small m-3">Contactate</button>
-      </div>
+   <div class="container">
+      <form id="form-ingreso-datos-personales">
+         {% include "components/form_generator.html" %}
+         <div class="container my-5">
+            <div class="flex-center flex-column flex-sm-row">
+               <a href='{{ url_for("cotizacion") }}'>
+                  <button class="btn btn-secondary button-small m-3" type="button">Anterior</button>
+               </a>
+               <button class="btn btn-primary button-large" type="submit">Continuar</button>
+               <button class="btn btn-secondary button-small m-3" type="button">Contactate</button>
+            </div>
+         </div>
+      </form>
    </div>
+   <script type="module"
+           src="{{ url_for('static', filename='js/pages_validations/ingresoDatosPersonales.js') }}"></script>
 {% endblock content %}

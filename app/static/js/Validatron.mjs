@@ -61,10 +61,36 @@ export class Validatron {
 		return listaMensajesError;
 	}
 
-	mostrarMensajesError() {
+	getElementosError() {
+		let listaElementosError = [];
+		this.registroElementos.forEach((elemento) => {
+			if (elemento.resultado.error === true) {
+				listaElementosError.push(elemento);
+			}
+		});
+		return listaElementosError;
+	}
+
+	alertarMensajesError() {
 		const listaErrores = this.getMensajesError();
 		listaErrores.forEach((mensajeError) => {
 			alert(mensajeError);
+		});
+	}
+
+	addErrorMessageToInputs() {
+		const listaElementosError = this.getElementosError();
+		listaElementosError.forEach((elemento) => {
+			const elementoHTML = elemento.elementoHTML;
+			if (!elementoHTML.classList.contains("is-validated")) {
+				// Esto esta para evitar que se inserte el mensaje de error multiples veces si se clickea el boton de enviar
+				// Si el elemento ya contiene "is-validated" como clase, no hace nada
+				elementoHTML.classList.add("is-invalid", "is-validated");
+				elementoHTML.insertAdjacentHTML(
+					"afterend",
+					"<div class='invalid-feedback'> Por favor revise... </div>"
+				);
+			}
 		});
 	}
 }

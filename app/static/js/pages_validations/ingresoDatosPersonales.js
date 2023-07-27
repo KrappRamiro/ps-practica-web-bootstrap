@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		event.preventDefault();
 		validatron.ejecutarValidaciones();
 		if (validatron.hayErorres()) {
-			validatron.mostrarMensajesError();
+			validatron.addErrorMessageToInputs();
 			return false;
 		}
 		window.location.href = "../confirmacion"; //one level up
